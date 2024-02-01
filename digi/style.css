@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: digital;
+    src: url(digital-7.ttf);
+}
+
+:root{
+    --light-color:cyan;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(39, 39, 50);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    color: cyan;
+    font-weight: bolder;
+    font-size: 40px;
+}
+#side,
+#time,
+#ig,
+#footer{
+    border: 1px solid white;
+}
+.frame{
+    
+    height: 300px;
+    width: 500px;
+    background-color:  #2f3742;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0f0f1c;
+    box-shadow: 15px 26px 44px 21px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-areas: 
+    'side time ig'
+    'footer footer footer';
+     grid-template-columns:1fr 2fr 1fr;
+     grid-template-rows: 3fr 1fr; 
+}
+#side{
+   grid-area: side; 
+   background-color: #0f0f1c;
+  
+}
+#time{
+    grid-area: time; 
+   
+   
+    
+ }
+ #ig{
+    grid-area: ig; 
+    background-color: #0f0f1c;
+    
+   
+ }
+
+#footer{
+    grid-area: footer ;
+     display: grid;
+    grid-template-areas: 'bot1 bot2 bot3';
+ 
+    grid-template-columns: 3fr 3fr 3fr; 
+
+ }
+ .bot1{
+    grid-area: 'bot1';
+    border: 1px solid white;
+    color: cyan;
+    
+ }
+ .bot2{
+    grid-area: 'bot2';
+    border: 1px solid white;
+    color: cyan;
+    
+ }
+ .bot3{
+    grid-area: 'bot3';
+    border: 1px solid white;
+    color: cyan;
+    
+ }
+
+ #side{
+    padding: 10px;
+
+ }
+ #side div{
+    padding: 5px;
+ }
+#time{
+    height: 100%;
+    width: 100%;
+    background-color: #0f0f1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: digital;
+    font-size: 50px;
+    font-weight: 700;
+    color: cyan;
+    position: relative;
+    text-shadow: 0 0 20px var(--light-color);
+}
+#time::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+   background-color: var(--light-color);
+   height: 100%;
+   width: 100%;
+   opacity: 0.1;
+   filter: blur(100px);
+}
+.mon,.tue,.wed,.thu,.fri,.sat,.sun{
+    text-align: center;
+    color: cyan;
+    
+}
+#ig{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+}
+img{
+    height: 30px;
+    width: 50px;
+}
+.bot1 {
+   padding: 15px;
+}
+.bot3{
+    display: flex;
+    padding: 3px;
+    font-size: 20px;
+    justify-content: center;
+    
+    gap: 10px;
+}
